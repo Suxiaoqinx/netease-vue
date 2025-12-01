@@ -10,7 +10,7 @@ import { setCookie, getCookie } from './utils/cookies.js'
 
 // 导入新的模块化功能
 import { isDark, toggleTheme, initThemeFromLocalStorage } from './utils/themeManager.js'
-import { settings, loadSettings, saveSettings, setSetting } from './utils/settingsManager.js'
+import { settings, loadSettings, saveSettings } from './utils/settingsManager.js'
 import { 
   musicUrl, loading, musicInfo, playlistUrl, playlistLoading, playlistInfo, albumUrl, albumLoading, albumInfo,elapsedTime, parseMusic, parsePlaylist, parseAlbum, clearMusicResult, clearPlaylistResult, clearAlbumResult, setExampleUrl, cleanupTimer,
   currentParsingTrack, parsingProgress
@@ -310,21 +310,7 @@ const computedPlaylistInfo = computed(() => {
                     </el-option>
                   </el-select>
                 </el-form-item>
-                <el-form-item label="接口版本" class="api-item">
-                  <el-select
-                    v-model="settings.apiVersion"
-                    placeholder="请选择接口版本"
-                    style="width: 200px"
-                    @change="(val) => setSetting('apiVersion', val)"
-                  >
-                    <el-option
-                      v-for="option in apiVersionOptions"
-                      :key="option.value"
-                      :label="option.label"
-                      :value="option.value"
-                    />
-                  </el-select>
-                </el-form-item>
+                
               </div>
 
               <el-form-item>
@@ -383,21 +369,7 @@ const computedPlaylistInfo = computed(() => {
                     </el-option>
                   </el-select>
                 </el-form-item>
-                <el-form-item label="接口版本" class="api-item">
-                  <el-select
-                    v-model="settings.apiVersion"
-                    placeholder="请选择接口版本"
-                    style="width: 200px"
-                    @change="(val) => setSetting('apiVersion', val)"
-                  >
-                    <el-option
-                      v-for="option in apiVersionOptions"
-                      :key="option.value"
-                      :label="option.label"
-                      :value="option.value"
-                    />
-                  </el-select>
-                </el-form-item>
+                
               </div>
 
               <el-form-item>
@@ -456,21 +428,7 @@ const computedPlaylistInfo = computed(() => {
                     </el-option>
                   </el-select>
                 </el-form-item>
-                <el-form-item label="接口版本" class="api-item">
-                  <el-select
-                    v-model="settings.apiVersion"
-                    placeholder="请选择接口版本"
-                    style="width: 200px"
-                    @change="(val) => setSetting('apiVersion', val)"
-                  >
-                    <el-option
-                      v-for="option in apiVersionOptions"
-                      :key="option.value"
-                      :label="option.label"
-                      :value="option.value"
-                    />
-                  </el-select>
-                </el-form-item>
+                
               </div>
 
               <el-form-item>
